@@ -27,7 +27,9 @@ public class Login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), ListHospital.class);
+//                Intent intent = new Intent(getApplicationContext(), ListHospital.class);
+                Intent intent = new Intent(getApplicationContext(), ListDokter.class);
+                intent.putExtra(ListDokter.ID_RS, "RSMMCJ");
                 startActivity(intent);
             }
         });

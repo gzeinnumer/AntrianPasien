@@ -29,21 +29,21 @@ public class ListHospital extends AppCompatActivity {
         setContentView(R.layout.activity_list_hospital);
         ButterKnife.bind(this);
 
-        Thread thread = new Thread() {
-            public void run() {
-                try {
-                    sleep(5000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                } finally {
-                    Intent intent = new Intent(getApplicationContext(), ListDokter.class);
-                    intent.putExtra(ListDokter.ID_RS, "RSMMCJ");
-                    startActivity(intent);
-                    finish();
-                }
-            }
-        };
-        thread.start();
+//        Thread thread = new Thread() {
+//            public void run() {
+//                try {
+//                    sleep(5000);
+//                } catch (InterruptedException e) {
+//                    e.printStackTrace();
+//                } finally {
+//                    Intent intent = new Intent(getApplicationContext(), ListDokter.class);
+//                    intent.putExtra(ListDokter.ID_RS, "RSMMCJ");
+//                    startActivity(intent);
+//                    finish();
+//                }
+//            }
+//        };
+//        thread.start();
 
         //todo 13 pecahkan bolam
 //        jika mau pakai auto, matikan line dibawah ini
