@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class AdapterAntrian extends RecyclerView.Adapter<AdapterPerawat.MyHolder> {
+public class AdapterAntrian extends RecyclerView.Adapter<AdapterAntrian.MyHolder> {
 
     private Context context;
     private ArrayList<ResponseAntrianAPI> list;
