@@ -1,6 +1,7 @@
 package com.gzeinnumer.antrianpasien.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.gzeinnumer.antrianpasien.R;
+import com.gzeinnumer.antrianpasien.activity.AntrianActivity;
 import com.gzeinnumer.antrianpasien.model.ResponseDokter;
 
 import java.util.ArrayList;
@@ -50,6 +52,14 @@ public class AdapterListDokter extends RecyclerView.Adapter<AdapterListDokter.Vi
         viewHolder.kotaNamaDokter.setText(list.get(i).getDokterName());
         viewHolder.profileDokter.setText(list.get(i).getProfile());
         viewHolder.photofileNameDokter.setText(list.get(i).getPhotoFileName());
+        viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, AntrianActivity.class);
+                intent.putExtra(AntrianActivity.ID_DOK, list.get(i).getDokterID());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
